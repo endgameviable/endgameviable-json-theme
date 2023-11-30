@@ -1,0 +1,15 @@
+{{- $parent := dict "title" "_sectionmap" -}}
+{{- $pages := $.Site.Sections -}}
+{{- $entries := slice -}}
+{{- range $pages -}}
+{{- if (and (ne .Section "_pagemap") (ne .Section "_sectionmap")) }}
+{{- $entry := dict
+    "link" .RelPermalink 
+    "title" .Title
+    "section" .Section
+    -}}
+{{- $entries = $entries | append $entry -}}
+{{- end -}}
+{{- end -}}
+{{- $output := merge $parent (dict "children" $entries) -}}
+{{- $output | jsonify (dict "indent" "  ") }}

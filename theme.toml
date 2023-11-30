@@ -1,0 +1,15 @@
+name = 'endgameviable-json-theme'
+license = 'AGPL'
+licenselink = 'https://github.com/endgameviable/endgameviable-json-theme/LICENSE'
+description = 'A Hugo theme to render JSON pages instead of HTML pages'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/endgameviable/endgameviable-json-theme'
+
+# If you have a running demo of the theme
+demosite = 'https://owner.github.io/repo'
+
+# If the theme has a single author
+[author]
+  name = 'UltrViolet'
+  homepage = 'https://endgameviable.com'
