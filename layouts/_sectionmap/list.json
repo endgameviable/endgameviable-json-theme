@@ -1,11 +1,14 @@
-{{- $parent := dict "title" "_sectionmap" -}}
+{{- $parent := dict 
+    "link" "/_sectionmap"
+    "date" .Date
+    -}}
 {{- $pages := $.Site.Sections -}}
 {{- $entries := slice -}}
 {{- range $pages -}}
 {{- if (and (ne .Section "_pagemap") (ne .Section "_sectionmap")) }}
 {{- $entry := dict
     "link" .RelPermalink 
-    "title" .Title
+    "date" .Date
     "section" .Section
     -}}
 {{- $entries = $entries | append $entry -}}

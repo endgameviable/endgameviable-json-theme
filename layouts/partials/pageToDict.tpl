@@ -21,23 +21,16 @@
 {{- end -}}
 
 {{- $entry := dict
-    "slug" .Slug
     "link" .RelPermalink 
     "date" .Date
-    "title" .Title
-    "summary" (.Summary | plainify)
+    "metadata" .Params
     "content" .Content
     "plain" .Plain
     "contentWordCount" .WordCount
     "contentReadingTime" .ReadingTime
     "tableOfContents" .TableOfContents
-    "categories" $categories
-    "alternates" $alternates
-    "images" $images
-    "tags" $tags
     "kind" .Kind
     "section" .Section
-    "type" .Type
     -}}
 {{- with .File -}}
 {{-     $entry = merge $entry (dict "contentSourceFile" .Path) -}}
