@@ -24,6 +24,7 @@
     "link" .RelPermalink 
     "date" .Date
     "metadata" .Params
+    "summary" (.Summary | plainify)
     "content" .Content
     "plain" .Plain
     "contentWordCount" .WordCount
