@@ -1,0 +1,5 @@
+version: 0.2
+# Nothing to do but enable output artifacts
+artifacts:
+  files:
+    - '**/*'
